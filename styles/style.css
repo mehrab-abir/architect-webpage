@@ -233,7 +233,6 @@ main .container .features-list p{
     align-items: flex-start;
     justify-content: center;
     gap: 100px;
-    margin-bottom: 100px;
 }
 
 .features-to-love .features-left-side{
@@ -317,5 +316,89 @@ main .container .features-list p{
     }
     .features-to-love .experience-badge button{
         padding: 20px 25px;
+    }
+}
+
+@media screen and (min-width:577px) and (max-width:768px){
+    .features-to-love .container{
+        flex-direction: column;
+    }
+    .features-to-love .features-left-side{
+        width: 100%;
+    }
+    .features-to-love .experience-badge{
+        transform: translateY(-150%);
+        margin: 0px;
+    }
+    .features-to-love .experience-badge button{
+        padding: 20px 25px;
+    }
+}
+
+/* some facts css */
+.some-facts{
+    margin-bottom: 100px;
+    transform: translateY(-100px);
+}
+.some-facts .container{
+    display: flex;
+    flex-direction: column;
+}
+.some-facts .some-facts-info{
+    margin-bottom: 100px;
+}
+.some-facts .some-facts-info h1{
+    font-size: 2.5rem;
+}
+.some-facts .some-facts-info p{
+    font-size: 0.8rem;
+    margin-top:20px;
+    width: 50%;
+}
+.some-facts .facts-boxes{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 50px;
+}
+.some-facts .facts-boxes .single-fact-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 30px;
+    border: 1px solid #FF900E;
+    border-radius: 10px;
+    transition: all 0.6s ease;
+}
+.some-facts .facts-boxes .single-fact-box:hover{
+    cursor: pointer;
+    transform: rotate(15deg)
+}
+
+@media screen and (max-width:400px){
+    .some-facts .facts-boxes{
+        grid-template-columns: 1fr;
+    }
+    .some-facts .some-facts-info p{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:401px) and (max-width:576px){
+    .some-facts .facts-boxes{
+        grid-template-columns: 1fr;
+    }
+    .some-facts .some-facts-info p{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:577px) and (max-width:768px){
+    .some-facts .facts-boxes{
+        grid-template-columns: 1fr 1fr;
+    }
+    .some-facts .some-facts-info p{
+        width: 100%;
     }
 }
