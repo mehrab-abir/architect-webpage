@@ -337,7 +337,6 @@ main .container .features-list p{
 
 /* some facts css */
 .some-facts{
-    margin-bottom: 100px;
     transform: translateY(-100px);
 }
 .some-facts .container{
@@ -402,3 +401,81 @@ main .container .features-list p{
         width: 100%;
     }
 }
+
+/* Sponsors section css */
+.sponsors{
+    margin-bottom: 100px;
+    transform: translateY(-100px);
+}
+.sponsors .container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.sponsors .container h1{
+    font-size: 2.5rem;
+}
+.sponsors .container p{
+    font-size: 0.8rem;
+    margin: 30px 0px;
+    width: 50%;
+}
+.sponsors .container .sponsor-logo{
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin-top: 30px;
+    gap: 30px;
+}
+.sponsors .container .sponsor-logo img{
+    transform: scale(0.9);
+    filter: grayscale(100%);
+}
+
+@media screen and (max-width:576px) {
+    .sponsors .container p{
+        width: 100%;
+    }
+    .sponsors .container .sponsor-logo{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (min-width:577px) and (max-width:768px) {
+    .sponsors .container p{
+        width: 60%;
+    }
+    .sponsors .container .sponsor-logo{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+/* footer css */
+footer{
+    transform: translateY(-50px);
+}
+footer .container{
+    background-color: #FFF4E7;
+    text-align: center;
+    padding: 15px 0px;
+}
+footer .container a{
+    text-decoration: none;
+    color: blue;
+}
+footer .container a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media(max-width:450px){
+    footer .container{
+        padding: 0px;
+    }
+    footer .container p{
+        padding: 20px;
+        width: 100%;
+    }
+}
+
